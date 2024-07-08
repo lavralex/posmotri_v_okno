@@ -9,10 +9,11 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
   padding-inline-start: 29px;
   padding-inline-end: 25px;
-  padding-block-start: 138px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -212,11 +213,16 @@ li:empty {
 }
 
 .content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   inline-size: 409px;
 }
 
 .title {
-  margin-inline-start: 4px;
+  display: block;
+  margin-inline-start: 3px;
+  margin-block-start: -4px;
   font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -234,7 +240,6 @@ li:empty {
   flex-direction: column;
   row-gap: 30px;
   margin-inline-start: 2px;
-  margin-block-start: 23px;
   padding-block-end: 5px;
   overflow-x: hidden;
   overflow-y: auto;
