@@ -38,8 +38,7 @@ fieldset {
 
 .content__card-link:focus,
 .search-form__textfield:focus,
-.button:focus,
-.search-form__checkbox:focus {
+.button:focus {
   outline: none;
 }
 
@@ -50,10 +49,6 @@ ol {
 
 a {
   text-decoration: none;
-}
-
-li:empty {
-  margin-block-end: -30px;
 }
 
 .visually-hidden {
@@ -75,6 +70,7 @@ li:empty {
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
+  min-block-size: 34px;
 }
 
 .button:active {
@@ -241,8 +237,7 @@ li:empty {
   row-gap: 30px;
   margin-inline-start: 2px;
   padding-block-end: 5px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
   block-size: 298px;
   inline-size: 409px;
 }
@@ -260,6 +255,10 @@ li:empty {
 .content__list::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #fff;
+}
+
+.content__list > *:nth-child(6n):not(:has(.more-button)) {
+  margin-block-end: -30px;
 }
 
 .content__card-link {
@@ -302,7 +301,6 @@ li:empty {
   min-height: 106px;
   padding-inline-start: 2px;
   overflow-x: visible;
-  word-break: break-all;
   inline-size: 100%;
 }
 
@@ -313,11 +311,14 @@ li:empty {
 .content__video-card-title {
   margin-block-start: 4px;
   margin-block-end: 6px;
+  overflow: hidden;
   font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -336,5 +337,4 @@ li:empty {
 
 .more-button {
   inline-size: 399px;
-  block-size: 34px;
 }
