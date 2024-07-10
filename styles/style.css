@@ -257,7 +257,7 @@ a {
   background-color: #fff;
 }
 
-.content__list > *:nth-child(6n):not(:has(.more-button)) {
+.content__list > :empty {
   margin-block-end: -30px;
 }
 
